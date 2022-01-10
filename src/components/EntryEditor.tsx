@@ -1,7 +1,6 @@
-import React from 'react';
 import { PlainClientAPI } from 'contentful-management';
-import { Paragraph } from '@contentful/forma-36-react-components';
 import { EditorExtensionSDK } from '@contentful/app-sdk';
+import PublishButton from './PublishButton';
 
 interface EditorProps {
   sdk: EditorExtensionSDK;
@@ -9,7 +8,7 @@ interface EditorProps {
 }
 
 const Entry = (props: EditorProps) => {
-  return <Paragraph>Hello Entry Editor Component</Paragraph>;
+  return <PublishButton sdk={props.sdk} cma={props.cma} />
 };
 
 export default Entry;

@@ -1,7 +1,6 @@
-import React from 'react';
 import { PlainClientAPI } from 'contentful-management';
-import { Paragraph } from '@contentful/forma-36-react-components';
 import { SidebarExtensionSDK } from '@contentful/app-sdk';
+import PublishButton from './PublishButton';
 
 interface SidebarProps {
   sdk: SidebarExtensionSDK;
@@ -9,7 +8,7 @@ interface SidebarProps {
 }
 
 const Sidebar = (props: SidebarProps) => {
-  return <Paragraph>Hello Sidebar Component</Paragraph>;
+  return <PublishButton sdk={props.sdk} cma={props.cma} />
 };
 
 export default Sidebar;

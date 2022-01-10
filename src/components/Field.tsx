@@ -1,7 +1,6 @@
-import React from 'react';
-import { PlainClientAPI } from 'contentful-management';
-import { Paragraph } from '@contentful/forma-36-react-components';
-import { FieldExtensionSDK } from '@contentful/app-sdk';
+import { PlainClientAPI } from "contentful-management";
+import { FieldExtensionSDK } from "@contentful/app-sdk";
+import PublishButton from "./PublishButton";
 
 interface FieldProps {
   sdk: FieldExtensionSDK;
@@ -12,7 +11,7 @@ const Field = (props: FieldProps) => {
   // If you only want to extend Contentful's default editing experience
   // reuse Contentful's editor components
   // -> https://www.contentful.com/developers/docs/extensibility/field-editors/
-  return <Paragraph>Hello Entry Field Component</Paragraph>;
+  return <PublishButton sdk={props.sdk} cma={props.cma} />;
 };
 
 export default Field;
